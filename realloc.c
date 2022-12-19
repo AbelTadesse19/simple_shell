@@ -40,14 +40,14 @@ void ffree(char **pp)
  * @old_size: byte size of previous block
  * @new_size: byte size of new block
  *
- * Return:pointer to da ol'block nameen
+ * Return: pointer to da ol'block nameen
  */
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *p;
 
-	if (!p)
+	if (!ptr)
 		return (malloc(new_size));
 	if (!new_size)
 		return (free(ptr), NULL);
